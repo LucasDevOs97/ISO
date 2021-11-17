@@ -112,4 +112,15 @@ Utilizaremos localuser y localgroup
 
 Para poder utilizar scripts:
 
-> Set-ExecutionPolicy
+> Set-ExecutionPolicy Unrestricted -Scope LocalMachine
+
+## Creación de una atrea básica:
+
+Nos deja configurar 4 aspectos:
+- Nombre
+- Descripción
+- Trigger
+- Acción
+
+> %SystemRoot% -> tiene la instalación de windows  
+  Cuando van entre dos tantos por ciento son variables de entorno
