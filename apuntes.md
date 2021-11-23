@@ -124,3 +124,9 @@ Nos deja configurar 4 aspectos:
 
 > %SystemRoot% -> tiene la instalación de windows  
   Cuando van entre dos tantos por ciento son variables de entorno
+
+
+
+  # Servicios
+ El comando stop-service solo detiene el servicio en ese momento pero al volver a arrancar la máquina se vuelve a habilitar.  
+ Para que el servicio no se vuelva a ejecutar sería el comando Stop-Service, pero si quisiéramos que no vuelva a habilitarse y que se detenga en ese momento, tenemos que lanzar ambos comandos.
