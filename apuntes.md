@@ -130,3 +130,21 @@ Nos deja configurar 4 aspectos:
   # Servicios
  El comando stop-service solo detiene el servicio en ese momento pero al volver a arrancar la máquina se vuelve a habilitar.  
  Para que el servicio no se vuelva a ejecutar sería el comando Stop-Service, pero si quisiéramos que no vuelva a habilitarse y que se detenga en ese momento, tenemos que lanzar ambos comandos.
+
+ ---------------------------------------------------------------------------------------------------------------------
+
+Instalar versión nueva de Powershell por consola
+
+Repositorios que utlizia:
+- msstore
+- github
+
+
+Instalar brave:
+
+> winget search brave
+>winget install --name brave --source winget
+
+Sería lo mismo para el powershell
+
+ ---------------------------------------------------------------------------------------------------------------------
