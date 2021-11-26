@@ -133,8 +133,6 @@ Nos deja configurar 4 aspectos:
 
  ---------------------------------------------------------------------------------------------------------------------
 
-Instalar versión nueva de Powershell por consola
-
 Repositorios que utlizia:
 - msstore
 - github
@@ -146,5 +144,26 @@ Instalar brave:
 >winget install --name brave --source winget
 
 Sería lo mismo para el powershell
+> winget search powershell
+> winget install --Name powershell --source winget
 
  ---------------------------------------------------------------------------------------------------------------------
+
+ Archivo: Conjunto de datos. Texto, ejecutables, binarios, links (enlaces)
+ Carpeta (directorio) : Contenedor de archivos y carpetas
+
+ La estructura es jerárquica
+
+ C:\ -> Raíz
+
+ En powershell:
+ - Item: Archivo / Carpeta
+ - Clear-Item
+ - Copy-Item
+ - Move-Item
+ - New-Item
+ - Remove-Item
+ - Rename-Item
+ - Get-ChildItem -> dir (cmd)
+    - Con el atributo Recurse se muestra todo lo que hay desde el directorio donde estamos hasta el nivel más bajo
+- tree nos da la información en árbol del directorio que le indiquemos
