@@ -167,3 +167,80 @@ Sería lo mismo para el powershell
  - Get-ChildItem -> dir (cmd)
     - Con el atributo Recurse se muestra todo lo que hay desde el directorio donde estamos hasta el nivel más bajo
 - tree nos da la información en árbol del directorio que le indiquemos
+
+- Ruta (PATH): forma de llegar al archivo. Hay rutas absolutas (como llegar desde la raíz) y rutas relativas (como llegar desde mi ubicación).
+
+> Write-Output -> devuelve la ruta
+
+> Test-Path -> Devuelve true o false si la ruta existe  o no respectivamente  
+    
+Volver a la raiz:  
+    - cd C:\
+    - cd ..\..\
+
+   
+    
+cd = Set-Location  
+  
+ls = Get-ChildItem  
+  
+Crear un directorio:
+
+- mkdir = New-Item   
+
+
+> PS C:\Users\user\Documents> New-Item -Name foodir
+
+    Directory: C:\Users\user\Documents
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          29/11/2021    12:51              0 foodir
+
+PS C:\Users\user\Documents>
+
+> PS C:\Users\user\Documents> New-Item -Name reallyfoodir   -ItemType Directory
+    Directory: C:\Users\user\Documents
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----          29/11/2021    12:52                reallyfoodir
+
+
+> PS C:\Users\user\Documents> mkdir reallyfoodir2
+    Directory: C:\Users\user\Documents
+Mode                 LastWriteTime         Length Name
+d----          29/11/2021    12:53                reallyfoodir2
+
+Eliminar un directorio:   
+- Remove-Item [Path] <string[]>  
+  
+- Remove-Item -LiteralPath <string[]>   
+
+New-Item -Path .\reallyfoodir\ -Name otherdir -ItemType Directory
+
+> MIMETYPE: especifica el tipo de contenido de un archivo (cabecera)
+
+
+> PS C:\Users\user\Documents> Remove-Item -Path .\reallyfoodir\ -Recurse -Force
+
+> PS C:\Users\user\Documents> Remove-Item -Path .\reallyfoodir2\, .\foodir
+
+## Borar un usuario y todos sus archivos
+
+> Remove-LocalUSer [name]    
+
+> Remove-Item -Path [path] -Recurse -Force    
+
+- no lo podemos borrar
+
+- rmdir /s /q [ruta]
+    - La s es el recurse
+    - la q es el force
+    - **CON CMD SI QUE PODEMOS**
+
+> cmd /c rmdir /s /q [path]
+
+cmd /c lanza el cmd para que ejecute el comando que va a continuación.
+
+## Permisos de carpetas
+
