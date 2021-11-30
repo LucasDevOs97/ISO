@@ -244,3 +244,8 @@ cmd /c lanza el cmd para que ejecute el comando que va a continuación.
 
 ## Permisos de carpetas
 
+
+
+ping funciona por el protocolo ICMT, echo request y echo reply cuando hacemos un ping
+
+-New-NetFirewallRule -Name -Direction -Profile -Action -LocalPort -Protocol
