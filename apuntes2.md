@@ -20,3 +20,12 @@ Objetivos:
 - Con Host-Only le asigna una dirección a la interfaz, crea una especie de switch y los equipos se pueden ver, tiene que estar en la misma dirección que la del anfitrión.
 
 > Cuando trabajamos con el Core, el que no tiene parte gráfica, y ejecutamos un comando que nos abrirá una ventana de entorno gráfico, no lo veremos.
+
+## Imstalar SSH por comandos
+
+Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
+Start-Service sshd
+Set-Service -Name sshd -StartupType Automatic
+
+Si el puerto no está abierto:
+New-NetFirewallRule -DisplayName "SSH ALLOW TCP PORT 22" -Direction inbound -Profile Any -Action Allow -LocalPort 22 -Protocol TCP
