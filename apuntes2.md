@@ -29,3 +29,41 @@ Set-Service -Name sshd -StartupType Automatic
 
 Si el puerto no está abierto:
 New-NetFirewallRule -DisplayName "SSH ALLOW TCP PORT 22" -Direction inbound -Profile Any -Action Allow -LocalPort 22 -Protocol TCP
+
+Promocionar un servidor a DC:
+
+> Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools
+  
+IncludeManagementTools es por si hace falta alguna herramient adicional.
+  
+> Test-ADDSForestInstallation   
+
+> Install-ADDSForest 
+
+         
+
+
+Manage > Add Roles And Features > Role-Based or feature-based installation
+
+Root Domain name: asir20.local
+
+Contraseña restauración: la de administrador
+
+#
+# Windows PowerShell script for AD DS Deployment
+#
+
+Import-Module ADDSDeployment
+Install-ADDSForest `
+-CreateDnsDelegation:$false `
+-DatabasePath "C:\Windows\NTDS" `
+-DomainMode "WinThreshold" `
+-DomainName "asir20.local" `
+-DomainNetbiosName "ASIR20" `
+-ForestMode "WinThreshold" `
+-InstallDns:$true `
+-LogPath "C:\Windows\NTDS" `
+-NoRebootOnCompletion:$false `
+-SysvolPath "C:\Windows\SYSVOL" `
+-Force:$true
+
