@@ -67,3 +67,20 @@ Install-ADDSForest `
 -SysvolPath "C:\Windows\SYSVOL" `
 -Force:$true
 
+---------------------------------------------------------------------------------------------------------------
+
+Comandos:    
+   
+> Get-ADForest       
+> Get-ADDomain   
+> Get-ADComputer -Filter *     
+> Get-ADUser -Filter *   
+
+- CN: Canonical Name -> Se utiliza para grupos de equipos
+- DC: Domain Controller -> ComputersContainer: CN=Computers,DC=asir20,DC=local
+- OU: Organizational Unity -> DomainControllersContainer: OU=Domain Controllers,DC=asir20,DC=local
+
+
+Primary Domain Controller Emulator: PDCEmulator -> PDCEmulator: WIN-Q8MOC76L76P.asir20.local
+
+
