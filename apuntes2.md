@@ -84,3 +84,13 @@ Comandos:
 Primary Domain Controller Emulator: PDCEmulator -> PDCEmulator: WIN-Q8MOC76L76P.asir20.local
 
 
+- Servidor: windows server 2022
+- Cliente: windows 10
+
+Redactar problemas cuando tenemos dos tarjetas de red.
+
+Solución: modificar manualmente y eliminar las ip 10.0....
+
+- APIPA (Automatic Private IP Addressing): direccion que se autoadjudica windows cuando no le pasamos una configuración 
+
+
