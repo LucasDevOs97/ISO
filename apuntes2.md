@@ -95,3 +95,7 @@ Solución: modificar manualmente y eliminar las ip 10.0....
 
 
 172.16.100.250
+
+10.0.2.2
+
+Para poder acceder a la configuración de red de VB es en los 3 cuadrados que aparece en herramientas.
