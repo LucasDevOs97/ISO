@@ -94,3 +94,4 @@ Solución: modificar manualmente y eliminar las ip 10.0....
 - APIPA (Automatic Private IP Addressing): direccion que se autoadjudica windows cuando no le pasamos una configuración 
 
 
+172.16.100.250
