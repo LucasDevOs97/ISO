@@ -99,3 +99,12 @@ Solución: modificar manualmente y eliminar las ip 10.0....
 10.0.2.2
 
 Para poder acceder a la configuración de red de VB es en los 3 cuadrados que aparece en herramientas.
+
+## Instalación Desatendida
+
+A partir de win10, solo tenemos que añadirle un xml con las respuestas a las preguntas de configuración.
+En el apartado final hay un script, donde podemos decirle lo que queremos que ejecute nada más termine la instalación, esto pueden ser comandos de powershell. Ejemplo: instalamos/actualizamos winget y ponemos en el script los comandos para que instale lo que ya nos interesa que se instale al terminar la configuración y ya tendremos la máquina 100% preparada.
+
+Para poder realizar la instalación desatendida, necesitamos un programa que nos ayuda, en este caso será: NLite
+
+Probar la ISO creada.
