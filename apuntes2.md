@@ -100,6 +100,8 @@ Solución: modificar manualmente y eliminar las ip 10.0....
 
 Para poder acceder a la configuración de red de VB es en los 3 cuadrados que aparece en herramientas.
 
+Tenemos que ponerle un alias al equipo, el nombre no se puede cambiar (o no se recomienda) porque el nombre en los archivos no cambian. cname
+
 ## Instalación Desatendida
 
 A partir de win10, solo tenemos que añadirle un xml con las respuestas a las preguntas de configuración.
@@ -108,3 +110,5 @@ En el apartado final hay un script, donde podemos decirle lo que queremos que ej
 Para poder realizar la instalación desatendida, necesitamos un programa que nos ayuda, en este caso será: NLite
 
 Probar la ISO creada.
+
+ipconfig /flushdns
