@@ -94,9 +94,18 @@ Solución: modificar manualmente y eliminar las ip 10.0....
 - APIPA (Automatic Private IP Addressing): direccion que se autoadjudica windows cuando no le pasamos una configuración 
 
 
-172.16.100.250
+172.16.100.71
 
-10.0.2.2
+255.255.0.0
+
+
+
+10.0.2.15
+
+255.255.0.0
+
+1.1.1.1
+1.1.1.2
 
 Para poder acceder a la configuración de red de VB es en los 3 cuadrados que aparece en herramientas.
 
