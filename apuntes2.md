@@ -121,3 +121,9 @@ Para poder realizar la instalación desatendida, necesitamos un programa que nos
 Probar la ISO creada.
 
 ipconfig /flushdns
+
+En domain controller solo habrá controladores de cominio
+En computers estarán todos los equipos que no sean DC
+
+Security group: sirven para establecer permisos, reglas, etc. Estos pueden ser Local, Global y Universal.
+Distribution group: solo sirven para mandar ocrreos
