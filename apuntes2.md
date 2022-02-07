@@ -127,3 +127,25 @@ En computers estarán todos los equipos que no sean DC
 
 Security group: sirven para establecer permisos, reglas, etc. Estos pueden ser Local, Global y Universal.
 Distribution group: solo sirven para mandar ocrreos
+
+# Administración y creación de Usuarios y Grupos por powershell
+
+> New-ADUser [-Name] <string> [-ChangePasswordAtLogon <bool>] [-Enabled <bool>] [-ProfilePath <string>] [-PasswordNeverExpires <bool>]  
+
+> New-ADGroup   
+
+> add-ADGroupMember     
+
+- Haremos 3 grupos (grupo01, grupo02, grupo03) y 3 usuarios (user01 (g01), user02 (g01, g02), user03 (g01, g02, g03)).
+Nos piden: fichero para crear, fichero para eliminar. crear.ps1, eliminar.ps1
+
+Ejemplo creación usuario:   
+    
+New-ADUser -Name usuario -Surname testuser -SamAccountName testuser -AccountPassword (ConvertTo-SecureString 1234.Abcd -AsPlainText -Force) -Enabled 1
+
+El script de crear los usuarios y los grupos y añadir dichos usuarios a dichos grupos está en la máquina virtual, Administrator\Documents\scripts
+
+
+New-ADUser -Name user01 -SamAccountName u01 -AccountPassword (ConvertTo-SecureString abc1234. -AsPlainText -Force) -Enabled 1
+
+(Obtener información del equipo: Get-ComputerInfo)
