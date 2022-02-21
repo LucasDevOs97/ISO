@@ -10,7 +10,7 @@ Objetivos:
     - Caracaterísticas: 
     - Roles: Incluyen las características.
     - Una vez establecidos los roles y las características instaladas se promociona para que pueda actuar como DC
-
+    
 - PuTTY
 - Nos podemos conectar remotamente por PowerShell
 - Si el Liceo tuviera un dominio y nos separaran por ramas de estudios sería: liceolapaz.local > ciclos.liceolapaz.local , eso.licoelapaz.local [...] Sería una infraestructura de árbol y los Bosques son conjuntos (réplicas) de árboles
@@ -149,3 +149,22 @@ El script de crear los usuarios y los grupos y añadir dichos usuarios a dichos 
 New-ADUser -Name user01 -SamAccountName u01 -AccountPassword (ConvertTo-SecureString abc1234. -AsPlainText -Force) -Enabled 1
 
 (Obtener información del equipo: Get-ComputerInfo)
+
+## Perfiles
+
+- Perfil por defecto (Locales): La primera vez que inician sesión el DC le organiza las carpetas en la máquina. Todo queda en local.
+
+- Perfil móvil: Al cerrar sesión, el perfil vuelve al DC y le vuelve a cargar todo al volver a iniciar sesión. Mucho tráfico en picos.  
+
+- Perfil + redirección de carpetas: Crearíamos en el servidor una carpeta, por ejemplo datos, y se crearán entradas para los usuarios. Ej: C:\datos\user01\Documents ... C:\datos\user01\Images. Cuando acceda a esas carpetas estará accediendo en el servidor, no en su máquina. Los picos serán mucho menores que en los del perfil móvil. 
+  
+
+Indicamos el perfil en la ventana: Properties > Profile      
+Creamos una carpeta en C en el servidor llamada pmoviles    
+Problemas: 
+- Permisos y seguridad: error -> la carpeta está creada en el servidor, tendremos que compartir la carpeta
+- Después de compartir creamos un grupo para los perfiles móviles y les damos permisos.
+
+Cuando entramos al perfil una vez la carpeta ya está compartida, no cargará todo lo del perfil hasta que se cierre la sesión porque es un perfil móvil
+
+Para el perfil + redireccionamiento de carpetas lo haremos desde Management > Group Policy Management, a través de las directivas.
