@@ -168,3 +168,18 @@ Problemas:
 Cuando entramos al perfil una vez la carpeta ya está compartida, no cargará todo lo del perfil hasta que se cierre la sesión porque es un perfil móvil
 
 Para el perfil + redireccionamiento de carpetas lo haremos desde Management > Group Policy Management, a través de las directivas.
+
+## GPO
+
+- Unidades Organizativas (OU): conjunto de elementos del dominio que se utiliza a nivel organizativo.
+- Un usuario puede pertenecer a varios grupos pero solo a UNA unidad organizativa.
+- Los grupos no son jerárquicos, las unidades organizativas si.
+
+> Get-ADOrganizationalUnit 
+
+- Primero creamos una unidad organizativa y metemos a los usuarios.
+
+
+
+
+- Comando actualización de Directivas: gpoupdate /force
