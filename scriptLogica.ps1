@@ -26,7 +26,7 @@ if($operacion -eq "xor") {
 
         $resultado = $false
 
-        echo echo "$($output) $($resultado)"
+        echo "$($output) $($resultado)"
 
     }
 
@@ -38,7 +38,7 @@ if($operacion -eq "nxor"){
 
         $resultado = "TRUE"
 
-        echo echo "$($output) $($resultado)"
+        echo "$($output) $($resultado)"
 
     }
 
@@ -46,7 +46,7 @@ if($operacion -eq "nxor"){
 
         $resultado = "FALSE"
 
-        echo echo "$($output) $($resultado)"
+        echo "$($output) $($resultado)"
 
     }
 
