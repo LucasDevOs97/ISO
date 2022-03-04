@@ -8,11 +8,13 @@ Param(
     [bool] $cierto2
 )
 
-$resul = ($cierto1 -xor $cierto2)
-
-if($operando1 -eq "true" -and $operando2 -eq "true"){
+if($operando1 -eq "true"){
 
     $cierto1 = $true
+
+}
+
+elseif($operando2 -eq "true"){
 
     $cierto2 = $true
 
@@ -26,9 +28,12 @@ else{
 
 }
 
+$resul = ($cierto1 -xor $cierto2)
+
+
 if($operacion -eq "xor"){
 
-    if($resul){
+    if($resul = $false){
 
         echo "$($operando1.ToUpper()) $($operacion.ToUpper()) $($operando2.ToUpper()) = TRUE"
 
@@ -44,7 +49,7 @@ if($operacion -eq "xor"){
 
 if ($operacion -eq "nxor") {
     
-    if(!$resul){
+    if($resul = $true){
 
         echo "$($operando1.ToUpper()) $($operacion.ToUpper()) $($operando2.ToUpper()) = TRUE"
 
