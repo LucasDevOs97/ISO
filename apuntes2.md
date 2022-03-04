@@ -182,4 +182,4 @@ Para el perfil + redireccionamiento de carpetas lo haremos desde Management > Gr
 
 
 
-- Comando actualización de Directivas: gpoupdate /force
+- Comando actualización de Directivas: gpupdate /force
