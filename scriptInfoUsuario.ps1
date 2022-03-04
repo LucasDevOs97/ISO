@@ -14,7 +14,8 @@ Get-ADUser -Filter {mail -eq $correo}
 #>
 
 Param (
-    [string] $nombre
+    [Parameter (Mandatory=$true)]
+    [string] [alias("user", "u")] $nombre
 )
 
 $userexists = Get-ADUser -Filter {SamAccountName -eq $nombre}

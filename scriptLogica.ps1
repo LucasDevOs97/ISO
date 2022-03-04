@@ -24,9 +24,9 @@ if($operacion -eq "xor") {
 
     else {
 
-        $resultado = $false
+        $resultado = "FALSE"
 
-        echo echo "$($output) $($resultado)"
+        echo "$($output) $($resultado)"
 
     }
 
@@ -38,7 +38,7 @@ if($operacion -eq "nxor"){
 
         $resultado = "TRUE"
 
-        echo echo "$($output) $($resultado)"
+        echo "$($output) $($resultado)"
 
     }
 
@@ -46,7 +46,7 @@ if($operacion -eq "nxor"){
 
         $resultado = "FALSE"
 
-        echo echo "$($output) $($resultado)"
+        echo "$($output) $($resultado)"
 
     }
 
@@ -62,6 +62,6 @@ else {
 Para que la salida sea en una única línea tenemos que poner todo entre comillas doble y poner el $ antes de los paréntesis para cada variable.
 Para simplificar un poco el código y por posibles modificaciones en el futuro, declaro el output al prnicipio ya que siempre va a ser igual
 pero no podemos poner dentro el parámetro resultado porque no es un valor "fijo", se le da valor después, dentro de las condiciones
-y al declararlo no le damos ningún parámetro por lo que el resultado siempre restaría emn blanco, si le hubiera puesto que por defecto 
+y al declararlo no le damos ningún parámetro por lo que el resultado siempre estaría en blanco, si le hubiera puesto que por defecto 
 fuese TRUE o FALSE, siempre tendría ese valor y el ejercicio no estaría bien
 #>
