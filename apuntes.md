@@ -227,7 +227,7 @@ New-Item -Path .\reallyfoodir\ -Name otherdir -ItemType Directory
 
 ## Borar un usuario y todos sus archivos
 
-> Remove-LocalUSer [name]    
+> Remove-LocalUser [name]    
 
 > Remove-Item -Path [path] -Recurse -Force    
 
