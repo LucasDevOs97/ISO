@@ -183,3 +183,19 @@ Para el perfil + redireccionamiento de carpetas lo haremos desde Management > Gr
 
 
 - Comando actualización de Directivas: gpupdate /force
+
+- Redirigir carpetas: gpos
+
+    - Si no lo hacemos por unuidades organizativas, tenemos que modificar el filtro de seguridad
+
+- Perfiles móviles: en el perfil
+
+
+### Práctica usuarios con perfil móvil y carpetas redirigidas
+
+- Primera Forma:
+    - Crear grupo, crear usuario, crear gpo filtrando usuarios y grupos 
+- Segunda forma:
+    - Crear OU, crear grupo, crear usuarios, crear gpo enlazada/asociada a la OU
+    - Configuración de las carpetas redirigidas: básica; crear una para cada perfil dentro de la raiz.
+

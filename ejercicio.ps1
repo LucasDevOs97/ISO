@@ -9,6 +9,32 @@
 Param(
     [Parameter (Mandatory= $true)]
     [string] $nombre,
-    [array] $estado = ("activar", "desactivar")
+    [validateset ("Activar", "Desactivar")] $accion="activar"
 )
 
+$existe = Get-Service | Where-Object -Property Name -eq $nombre
+
+if($existe){
+
+    if($accion -eq "activar"){
+
+        Start-Service -Name $nombre
+
+    }
+
+    else{
+
+        Stop-Service -Name $nombre 
+
+    }
+
+
+}
+
+else{
+
+    echo "ERROR: El servicio $($nombre) no existe"
+
+}
+
+<# wisvc #>
