@@ -199,3 +199,16 @@ Para el perfil + redireccionamiento de carpetas lo haremos desde Management > Gr
     - Crear OU, crear grupo, crear usuarios, crear gpo enlazada/asociada a la OU
     - Configuración de las carpetas redirigidas: básica; crear una para cada perfil dentro de la raiz.
 
+
+## Windows Server Core
+
+Una vez configurada la red del Core y que al hacer ping al server con entorno gráfico da respuesta, al hacerlo de la de entorno gráfico al Core no deja. Para que nos deje tenemos que crear una nueva regla de Firewall:
+
+> New-NteFirewallRule -DisplayName "ping" -Direction Inbound -Action Allow -Protocol ICMPv4 -Enabled True
+
+> Install-WindowsFeature AS_DomainServices -IncludeManagementTools -Verbose (instalación de caracteríticas)
+
+> Install-ADDSDomainController
+
+Como va a ser un respaldo del otro servidor, también necesitaremos configurar el DNS.
+Este DNS se lo tendremos que poner como segunda opción a la máquina cliente.
