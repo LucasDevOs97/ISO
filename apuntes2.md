@@ -206,7 +206,7 @@ Una vez configurada la red del Core y que al hacer ping al server con entorno gr
 
 > New-NteFirewallRule -DisplayName "ping" -Direction Inbound -Action Allow -Protocol ICMPv4 -Enabled True
 
-> Install-WindowsFeature AS_DomainServices -IncludeManagementTools -Verbose (instalación de caracteríticas)
+> Install-WindowsFeature AD-Domain-Services -IncludeManagementTools -Verbose (instalación de caracteríticas)
 
 > Install-ADDSDomainController
 
